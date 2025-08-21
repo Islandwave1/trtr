@@ -1,1 +1,21 @@
-import Layout from '../components/Layout'; import dynamic from 'next/dynamic'; const AIChat = dynamic(()=>import('../components/AIChat'),{ssr:false}); export default function Home(){return (<Layout><section className='hero'><div><span className='kicker'>Canada • Vancouver Island</span><h1 className='title'>Internet that connects communities.</h1><p className='subtitle'>Live island content, marketplace, and a Beat‑Your‑Bill guarantee.</p><div style={{display:'flex',gap:10,flexWrap:'wrap'}}><a className='btn' href='/plans'>See Plans</a><a className='btn alt' href='/market'>Explore Marketplace</a></div></div><div className='card'><div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:12,overflow:'hidden'}}><iframe src='https://www.youtube.com/embed/live_stream?channel=@Islandwavenet' title='IslandWave Live' style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',border:0}} allowFullScreen /></div><div style={{marginTop:8,color:'#9fb3c8'}}>Live: community events & local news</div></div></section><AIChat/></Layout>)}
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import YouTubeEmbed from '../components/YouTubeEmbed';
+import ChatbotWidget from '../components/ChatbotWidget';
+
+export default function Home() {
+  return (
+    <div className="bg-gradient-to-br from-blue-800 via-teal-600 to-blue-900 min-h-screen text-white">
+      <Navbar />
+      <main className="max-w-5xl mx-auto px-4 py-10 text-center">
+        <h1 className="text-5xl font-bold mb-6">Welcome to IslandWave</h1>
+        <p className="text-xl mb-8">Your Local ISP for Vancouver Island</p>
+        <div className="rounded-xl overflow-hidden shadow-lg">
+          <YouTubeEmbed embedId="dQw4w9WgXcQ" />
+        </div>
+      </main>
+      <ChatbotWidget />
+      <Footer />
+    </div>
+  );
+}
