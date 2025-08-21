@@ -1,0 +1,1 @@
+import Layout from '../components/Layout'; export default function News(){return (<Layout title="Local News"><h1>Local News</h1><p>Community stories, fibre build updates, and partner highlights.</p></Layout>)}

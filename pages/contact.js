@@ -1,0 +1,1 @@
+import Layout from '../components/Layout'; export default function Contact(){return (<Layout title="Contact"><h1>Contact</h1><p>Email: support@islandwave.ca • Phone: (xxx) xxx‑xxxx</p></Layout>)}

@@ -1,9 +1,1 @@
-
-export default function Portal() {
-  return (
-    <div style={{ padding: '20px' }}>
-      <h1>Customer Portal</h1>
-      <p>Coming soon: Manage your account, pay bills, and schedule service calls.</p>
-    </div>
-  );
-}
+import Layout from '../components/Layout'; export default function Portal(){return (<Layout title="My Portal"><h1>My Portal</h1><p>Sign‑in, invoices, and service management coming soon.</p></Layout>)}
