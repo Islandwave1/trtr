@@ -1,24 +1,24 @@
 
-# IslandWave — Superior Site (Canada-wide legal + modern UI)
+# IslandWave (Best Ever Build)
 
-**What’s included**
-- Premium UI (glass, gradients, animated buttons), fully responsive
-- Live YouTube embed
-- Plans, News, Events, Contact, Sign Up, Portal placeholders
-- **Canada-wide** legal pages: Terms, Privacy (PIPEDA), AUP, Service Agreement
-- Sticky nav + footer with quick links
+## What you have
+- Premium UI (glass, gradients, animated buttons)
+- **AI Assistant widget** (API stub at `/api/ai` – works without keys)
+- **Community Feed** (Facebook-like posts with localStorage)
+- **Support Lounge** (simple chat per browser tab)
+- YouTube Live on Home & Live pages
+- Plans, Sign Up, Portal, News, Events, Contact
+- **Canada‑wide Legal**: Terms, Privacy (PIPEDA), AUP, Service Agreement
+- Vercel-ready
 
-## Deploy on Vercel
-1. Download the ZIP and unzip.
-2. Go to vercel.com → New Project → **Upload** this folder.
-3. Deploy.
+## Deploy
+1. `npm install`
+2. `npm run dev` → http://localhost:3000
+3. Or upload folder to Vercel (no env vars required for this demo).
 
-## Run locally
-```bash
-npm install
-npm run dev
-# visit http://localhost:3000
-```
+## Upgrade path
+- Replace `/pages/api/ai.js` to call your AI provider using an API key.
+- Add authentication (Firebase/Clerk/NextAuth) and replace localStorage with a database (Supabase/Firebase/PlanetScale) for Community & Support.
+- Add Stripe for billing (test mode first).
 
-Customize logo: replace `/public/logo.png`.
-Update colors in `styles/globals.css`.
+Enjoy!

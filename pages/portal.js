@@ -1,1 +1,1 @@
-import Layout from '../components/Layout'; export default function Portal(){return (<Layout title="My Portal"><h1>My Portal</h1><p>Sign‑in, invoices, and service management coming soon.</p></Layout>)}
+import Layout from '../components/Layout'; export default function Portal(){return (<Layout title="My Portal"><h1>My Portal</h1><p>Login, invoices, and service management coming soon.</p></Layout>)}

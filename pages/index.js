@@ -1,33 +1,35 @@
 
-import Head from 'next/head';
+import Layout from '../components/Layout'
+import Link from 'next/link'
+import dynamic from 'next/dynamic'
+const AIChat = dynamic(()=>import('../components/AIChat'),{ssr:false})
 
-export default function Home() {
-  return (
-    <div>
-      <Head>
-        <title>IslandWave | Vancouver Island ISP</title>
-      </Head>
-      <header style={{backgroundColor: '#003366', padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-        <img src="/logo.png" alt="IslandWave Logo" style={{height: '50px'}} />
-        <nav>
-          <a href="#" style={{color: '#fff', margin: '0 10px'}}>Home</a>
-          <a href="#" style={{color: '#fff', margin: '0 10px'}}>Plans</a>
-          <a href="#" style={{color: '#fff', margin: '0 10px'}}>Community</a>
-          <a href="#" style={{color: '#fff', margin: '0 10px'}}>Contact</a>
-        </nav>
-      </header>
-      <main style={{textAlign: 'center', padding: '2rem'}}>
-        <h1 style={{fontSize: '3rem', color: '#003366'}}>Welcome to IslandWave</h1>
-        <p style={{fontSize: '1.5rem', color: '#555'}}>Your local ISP for Vancouver Island</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=YOUR_CHANNEL_ID" frameBorder="0" allowFullScreen></iframe>
-        <div style={{marginTop: '2rem'}}>
-          <a href="#" style={{backgroundColor: '#003366', color: '#fff', padding: '10px 20px', borderRadius: '5px'}}>Sign Up</a>
+export default function Home(){
+  return (<Layout title="IslandWave — Canada‑wide ISP, community first">
+    <section className="hero">
+      <div>
+        <h1 className="title">A smarter ISP for Canada — live, local, and community‑powered.</h1>
+        <p className="subtitle">Next‑gen connectivity with a built‑in assistant to answer anything on the spot.</p>
+        <div style={{display:'flex',gap:10,flexWrap:'wrap'}}>
+          <Link className="btn" href="/plans">See Plans</Link>
+          <Link className="btn alt" href="/signup">Get Started</Link>
         </div>
-      </main>
-      <footer style={{backgroundColor: '#f4f4f4', textAlign: 'center', padding: '1rem', marginTop: '2rem'}}>
-        <p>© 2025 IslandWave. All rights reserved. | <a href="/legal">Legal</a></p>
-      </footer>
-      <script src="/chatbot.js"></script>
-    </div>
-  );
+      </div>
+      <div className="card">
+        <div style={{position:'relative',paddingBottom:'56.25%',height:0,borderRadius:12,overflow:'hidden'}}>
+          <iframe src="https://www.youtube.com/embed/live_stream?channel=@Islandwavenet" title="IslandWave Live"
+            style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',border:0}} allowFullScreen />
+        </div>
+        <div style={{marginTop:8,color:'#9fb3c8'}}>Live: community events & local news</div>
+      </div>
+    </section>
+
+    <section className="grid">
+      <div className="card"><h3>Faster</h3><p>Symmetric plans tuned for streaming, gaming, and work‑from‑home.</p></div>
+      <div className="card"><h3>Fair</h3><p>Transparent, Canada‑wide terms. No hidden fees.</p></div>
+      <div className="card"><h3>Friendlier</h3><p>Support that feels local, with a community you can actually talk to.</p></div>
+    </section>
+
+    <AIChat/>
+  </Layout>)
 }
