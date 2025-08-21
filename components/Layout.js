@@ -15,6 +15,7 @@ export default function Layout({title='IslandWave', children}){
           <Link href="/live">Live</Link>
           <Link href="/plans">Plans</Link>
           <Link href="/community">Community</Link>
+          <Link href="/market">Marketplace</Link>
           <Link href="/support-lounge">Support</Link>
           <Link href="/signup">Sign Up</Link>
           <Link href="/portal">Portal</Link>

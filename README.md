@@ -1,24 +1,21 @@
 
-# IslandWave (Best Ever Build)
+# IslandWave — Marketplace Build
 
-## What you have
-- Premium UI (glass, gradients, animated buttons)
-- **AI Assistant widget** (API stub at `/api/ai` – works without keys)
-- **Community Feed** (Facebook-like posts with localStorage)
-- **Support Lounge** (simple chat per browser tab)
-- YouTube Live on Home & Live pages
-- Plans, Sign Up, Portal, News, Events, Contact
-- **Canada‑wide Legal**: Terms, Privacy (PIPEDA), AUP, Service Agreement
-- Vercel-ready
+## Included
+- Premium UI + sticky nav with logo
+- AI Assistant widget (client UI + API stub at `/api/ai`)
+- Community Feed + Support Lounge (demo)
+- **Marketplace**: search/filter, create listing, listing detail with ratings/reviews, verified badges, report + moderation queue (client demo)
+- Live (YouTube), Plans, Sign Up, Portal, News, Events, Contact
+- Canada‑wide legal: Terms, Privacy (PIPEDA), AUP, Service Agreement
+- Vercel-ready; no env keys required for demo
 
 ## Deploy
-1. `npm install`
-2. `npm run dev` → http://localhost:3000
-3. Or upload folder to Vercel (no env vars required for this demo).
+- Upload the folder to Vercel → Deploy.
+- Or locally: `npm install && npm run dev`
 
-## Upgrade path
-- Replace `/pages/api/ai.js` to call your AI provider using an API key.
-- Add authentication (Firebase/Clerk/NextAuth) and replace localStorage with a database (Supabase/Firebase/PlanetScale) for Community & Support.
-- Add Stripe for billing (test mode first).
-
-Enjoy!
+## Next Steps (production)
+- Add Auth (Google via NextAuth) to verify users; store `verified=true` on profile.
+- Database (Supabase/Firebase) to persist marketplace, posts, and reports.
+- Payments/escrow (Stripe) for safe transactions.
+- Admin role + moderation tools behind auth.

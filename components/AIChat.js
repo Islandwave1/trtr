@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 export default function AIChat(){
   const [open,setOpen]=useState(false)
-  const [messages,setMessages]=useState([{role:'assistant',content:'Hi! I\'m the IslandWave Assistant. Ask me about plans, coverage, billing, or community events.'}])
+  const [messages,setMessages]=useState([{role:'assistant',content:'Hi! I\'m the IslandWave Assistant. Ask me about plans, coverage, billing, marketplace safety, or community events.'}])
   const inputRef = useRef(null)
 
   async function send(){

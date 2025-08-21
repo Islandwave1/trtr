@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 export default function SignUp(){
   const router = useRouter()
   const [form,setForm]=useState({plan: router.query.plan||'basic', name:'', email:'', address:'', city:'', province:'', postal:''})
-  const submit=(e)=>{e.preventDefault(); alert('Thanks! This demo form submitted. We\'ll enable payments & auth next.');}
+  const submit=(e)=>{e.preventDefault(); alert('Thanks! This demo form submitted. We\'ll enable payments & verification next.');}
   return (<Layout title="Sign Up">
     <h1>Sign Up</h1>
     <div className="card">
